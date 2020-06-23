@@ -73,6 +73,7 @@ export default {
   text-decoration: none;
   color: grey;
   cursor: pointer;
+  transition: color 1s ease;
 }
 .header-link:hover {
   color: black;

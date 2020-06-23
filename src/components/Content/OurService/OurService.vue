@@ -18,19 +18,19 @@ export default {
     return {
       services: [
         {
-          title: "Meetup",
+          title: "Pay-as-you-feel Development",
           linkUrl: "https://www.code.sydney/static/img/001-responsive.png",
           content:
             "We help individuals, startups and established organisations alike in building bespoke applications for their work or business. It can be as simple as brochure websites or as complex as business process workflow applications. We offer pay-you-feel model to help beginners gain real-world paid experience."
         },
         {
-          title: "Slack",
+          title: "Address Validation",
           linkUrl: "https://www.code.sydney/static/img/002-checklist.png",
           content:
             "We use Mastersoft Group's Harmony software to help customers in Australia and New Zealand cleanse and deduplicate address data as part of their customer information data quality initiative in the organisation."
         },
         {
-          title: "LinkedIn",
+          title: "Free Consultation",
           linkUrl: "https://www.code.sydney/static/img/003-man.png",
           content: "Have a chat with us to discuss how we can help."
         }

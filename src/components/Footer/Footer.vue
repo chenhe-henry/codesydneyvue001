@@ -82,6 +82,7 @@ export default {
   text-decoration: none;
   color: white;
   cursor: pointer;
+  transition: color 1s ease;
 }
 .footer-link:hover {
   color: tomato;
