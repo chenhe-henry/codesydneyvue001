@@ -31,7 +31,7 @@ export default {
       message: "",
       isDisabled: true,
       banner: {
-        comingSoon: `This part is still under construction 🏗`
+        comingSoon: `Still buidling this part 🏗 Will coming Soon`
       }
     };
   },
