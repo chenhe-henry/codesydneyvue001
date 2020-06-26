@@ -2,6 +2,13 @@
   <div id="app">
     <Header />
     <HomePage />
+    <Banner :content="banner.comingSoon" />
+    <h1>Search for "{{message}}"</h1>
+
+    <input v-model="message" placeholder="enter the name" aria-label="searchInput" />
+    <button :disabled="message.length === 0 ? true : false" @click="clearInput">Search</button>
+    <button :disabled="message.length === 0 ? true : false" @click="clearInput">x</button>
+    <Banner :content="banner.comingSoon" />
     <Footer />
   </div>
 </template>
@@ -10,12 +17,28 @@
 import HomePage from "./components/HomePage.vue";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
+import Banner from "./components/Content/Banner/Banner";
 export default {
   name: "App",
   components: {
     HomePage,
     Header,
-    Footer
+    Footer,
+    Banner
+  },
+  data() {
+    return {
+      message: "",
+      isDisabled: true,
+      banner: {
+        comingSoon: `This part is still under construction 🏗`
+      }
+    };
+  },
+  methods: {
+    clearInput() {
+      this.message = "";
+    }
   }
 };
 </script>

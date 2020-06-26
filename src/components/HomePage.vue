@@ -4,7 +4,7 @@
       Sydney Volunteer
       <br />Programmers
     </div>
-    <OurService />
+    <OurService :title="serviceTitle" />
   </div>
 </template>
 
@@ -17,6 +17,11 @@ export default {
   },
   components: {
     OurService
+  },
+  data() {
+    return {
+      serviceTitle: "What we do"
+    };
   }
 };
 </script>

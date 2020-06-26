@@ -1,9 +1,12 @@
 <template>
   <div class="ourservice">
-    <div v-for="service in services" :key="`${service.title}`" class="ourservice-item">
-      <img :src="`${service.linkUrl}`" :alt="`${service.title}`" />
-      <h1>{{service.title}}</h1>
-      <h3>{{service.content}}</h3>
+    <h1 class="ourservice-title">{{title}}</h1>
+    <div class="ourservice-list">
+      <div v-for="service in services" :key="`${service.title}`" class="ourservice-item">
+        <img :src="`${service.linkUrl}`" :alt="`${service.title}`" />
+        <h1>{{service.title}}</h1>
+        <h3>{{service.content}}</h3>
+      </div>
     </div>
   </div>
 </template>
@@ -12,7 +15,11 @@
 export default {
   name: "OurService",
   props: {
-    msg: String
+    msg: String,
+    title: {
+      type: String,
+      required: true
+    }
   },
   data() {
     return {
@@ -45,6 +52,12 @@ export default {
   background-color: white;
   color: black;
   padding: 10px;
+}
+.ourservice-title {
+  display: inline-block;
+  font-size: 3rem;
+}
+.ourservice-list {
   display: flex;
 }
 .ourservice-item {
