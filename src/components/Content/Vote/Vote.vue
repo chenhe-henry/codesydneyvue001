@@ -5,7 +5,7 @@
       <h2>{{team.memberName}}</h2>
       <details>
         <summary>More</summary>
-        {{team.description}}
+        <h5 class="member-description">{{team.description}}</h5>
       </details>
       <h1>{{team.vote}}/{{totalVotes}}</h1>
       <button @click="addToVote(team.id)">Like ❤️</button>
@@ -140,10 +140,18 @@ export default {
   margin: 20px;
 }
 .Vote-block button {
+  cursor: pointer;
   padding: 5px;
   margin: 0 5px;
   font-weight: bold;
   border-radius: 5px;
   background-color: rgba(12, 233, 181, 0.961);
+}
+.member-description {
+  text-align: justify;
+}
+.member-description::first-letter {
+  font-size: 2rem;
+  color: rgba(245, 36, 12, 0.817);
 }
 </style>
