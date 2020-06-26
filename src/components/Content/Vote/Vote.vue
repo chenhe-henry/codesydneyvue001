@@ -1,14 +1,15 @@
 <template>
   <div class="Vote-block">
-    <div v-for="team in teamMembers" :key="team.id">
+    <div v-for="team in teamMembers" :key="team.id" class="Vote-block-member">
       <img :src="team.imageUrl" class="avatar" :alt="team.memberName" />
+      <h2>{{team.memberName}}</h2>
       <details>
         <summary>More</summary>
         {{team.description}}
       </details>
       <h1>{{team.vote}}/{{totalVotes}}</h1>
-      <button @click="addToVote">Like</button>
-      <button @click="removeFromVote">Dislike</button>
+      <button @click="addToVote(team.id)">Like ❤️</button>
+      <button @click="removeFromVote(team.id)" :disabled="negative(team.id)">Dislike 💔</button>
     </div>
   </div>
 </template>
@@ -106,13 +107,20 @@ export default {
     };
   },
   methods: {
-    addToVote() {
+    addToVote(id) {
       this.$emit("add-to-vote");
-      this.teamMembers[0].vote += 1;
+      this.teamMembers[id - 1].vote += 1;
     },
-    removeFromVote() {
+    removeFromVote(id) {
       this.$emit("remove-from-vote");
-      this.teamMembers[0].vote -= 1;
+      this.teamMembers[id - 1].vote -= 1;
+    },
+    negative(id) {
+      if (this.teamMembers[id - 1].vote <= 0) {
+        return true;
+      } else {
+        return false;
+      }
     }
   }
 };
@@ -127,5 +135,15 @@ export default {
 .Vote-block {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+}
+.Vote-block-member {
+  margin: 20px;
+}
+.Vote-block button {
+  padding: 5px;
+  margin: 0 5px;
+  font-weight: bold;
+  border-radius: 5px;
+  background-color: rgba(12, 233, 181, 0.961);
 }
 </style>

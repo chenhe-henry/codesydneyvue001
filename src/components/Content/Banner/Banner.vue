@@ -15,6 +15,7 @@ export default { name: "Banner", props: { content: String } };
   height: 20vh;
   font-size: 2rem;
 }
+
 .banner-content::after {
   overflow: hidden;
   display: inline-block;

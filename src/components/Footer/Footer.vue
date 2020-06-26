@@ -86,6 +86,5 @@ export default {
 }
 .footer-link:hover {
   color: tomato;
-  font-size: 2rem;
 }
 </style>

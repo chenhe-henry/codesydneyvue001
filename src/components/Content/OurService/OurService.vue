@@ -5,7 +5,7 @@
       <div v-for="service in services" :key="`${service.title}`" class="ourservice-item">
         <img :src="`${service.linkUrl}`" :alt="`${service.title}`" />
         <h1>{{service.title}}</h1>
-        <h3>{{service.content}}</h3>
+        <h3 class="ourservice-content">{{service.content}}</h3>
       </div>
     </div>
   </div>
@@ -64,5 +64,9 @@ export default {
   flex-grow: 1;
   width: 33vw;
   padding: 20px;
+}
+.ourservice-content::first-letter {
+  font-size: 2rem;
+  color: rgba(245, 36, 12, 0.817);
 }
 </style>
