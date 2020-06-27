@@ -9,7 +9,7 @@
 </template>
 
 <script>
-import OurService from "./Content/OurService/OurService";
+import OurService from "./OurService/OurService";
 export default {
   name: "HomePage",
   props: {

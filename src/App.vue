@@ -3,13 +3,9 @@
     <Header />
     <HomePage />
     <Banner :content="banner.comingSoon" />
-    <h1>Search for "{{message}}"</h1>
-    <input v-model="message" placeholder="enter the name" aria-label="searchInput" />
-    <button :disabled="message.length === 0 ? true : false" @click="showSearch">Search</button>
-    <button :disabled="message.length === 0 ? true : false" @click="clearInput">x</button>
-    <hr />
     <Vote :totalVotes="totalVotes" @add-to-vote="addVotes" @remove-from-vote="deleteVote" />
     <Banner :content="banner.comingSoon" />
+    <Reviews @review-submitted="addReview" :reviews="reviews" />
     <Footer />
   </div>
 </template>
@@ -18,8 +14,9 @@
 import HomePage from "./components/HomePage.vue";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
-import Banner from "./components/Content/Banner/Banner";
-import Vote from "./components/Content/Vote/Vote";
+import Banner from "./components/Banner/Banner";
+import Vote from "./components/Vote/Vote";
+import Reviews from "./components/Reviews/Reviews";
 export default {
   name: "App",
   components: {
@@ -27,30 +24,28 @@ export default {
     Header,
     Footer,
     Banner,
-    Vote
+    Vote,
+    Reviews
   },
   data() {
     return {
-      message: "",
       isDisabled: true,
       banner: {
-        comingSoon: `Still buidling this part 🏗 Will coming Soon`
+        comingSoon: ` 🏗 Coming Soon`
       },
-      totalVotes: 0
+      totalVotes: 0,
+      reviews: []
     };
   },
   methods: {
-    showSearch() {
-      console.log(this.message);
-    },
-    clearInput() {
-      this.message = "";
-    },
     addVotes() {
       this.totalVotes += 1;
     },
     deleteVote() {
       this.totalVotes -= 1;
+    },
+    addReview(websiteReview) {
+      this.reviews.push(websiteReview);
     }
   }
 };
