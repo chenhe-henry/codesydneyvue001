@@ -75,6 +75,7 @@ export default {
   padding: 10px;
   text-align: right;
   padding-right: 10vw;
+  grid-column: full-start / full-end;
 }
 .footer-link {
   font-weight: bold;

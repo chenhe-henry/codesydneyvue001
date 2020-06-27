@@ -33,6 +33,7 @@ export default {
 
   color: white;
   background-color: rgb(8, 90, 125);
+  grid-column: full-start / full-end;
 }
 .banner {
   height: 50vh;

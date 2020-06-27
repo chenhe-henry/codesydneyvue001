@@ -56,6 +56,7 @@ export default {
 
 <style  scoped>
 .header {
+  grid-column: full-start / full-end;
   height: 15vh;
   background-color: white;
   width: 100%;

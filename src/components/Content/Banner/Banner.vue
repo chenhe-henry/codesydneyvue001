@@ -14,6 +14,7 @@ export default { name: "Banner", props: { content: String } };
   background-color: rgb(8, 90, 125);
   height: 20vh;
   font-size: 2rem;
+  grid-column: full-start / full-end;
 }
 
 .banner-content::after {

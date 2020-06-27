@@ -5,7 +5,7 @@
     <Banner :content="banner.comingSoon" />
     <h1>Search for "{{message}}"</h1>
     <input v-model="message" placeholder="enter the name" aria-label="searchInput" />
-    <button :disabled="message.length === 0 ? true : false" @click="clearInput">Search</button>
+    <button :disabled="message.length === 0 ? true : false" @click="showSearch">Search</button>
     <button :disabled="message.length === 0 ? true : false" @click="clearInput">x</button>
     <hr />
     <Vote :totalVotes="totalVotes" @add-to-vote="addVotes" @remove-from-vote="deleteVote" />
@@ -40,6 +40,9 @@ export default {
     };
   },
   methods: {
+    showSearch() {
+      console.log(this.message);
+    },
     clearInput() {
       this.message = "";
     },
@@ -63,5 +66,12 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+  display: grid;
+  grid-template-columns:
+    [full-start] minmax(6rem, 1fr) [center-start] repeat(
+      3,
+      [col-start] minmax(min-content, 28rem) [col-end]
+    )
+    [center-end] minmax(6rem, 1fr) [full-end];
 }
 </style>

@@ -133,6 +133,7 @@ export default {
   clip-path: circle();
 }
 .Vote-block {
+  grid-column: center-start / center-end;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
 }
