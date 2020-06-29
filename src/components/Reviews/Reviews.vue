@@ -107,15 +107,16 @@ export default {
 };
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .Reviews {
   grid-column: center-start / center-end;
+  &-form {
+    border: 1px solid black;
+    border-radius: 5px;
+    margin: 10px;
+  }
 }
-.Reviews-form {
-  border: 1px solid black;
-  border-radius: 5px;
-  margin: 10px;
-}
+
 .Review-blocks {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -126,14 +127,15 @@ export default {
   margin: 5px;
   cursor: pointer;
   transition: all 0.2s;
+  &:hover {
+    transform: translateY(-5px);
+    background-color: rgba(12, 233, 181, 0.961);
+  }
+  &:active {
+    transform: translateY(0);
+  }
 }
-.Review-block:hover {
-  transform: translateY(-5px);
-  background-color: rgba(12, 233, 181, 0.961);
-}
-.Review-block:active {
-  transform: translateY(0);
-}
+
 .activeTab {
   background-color: rgba(12, 233, 181, 0.961);
 }

@@ -21,7 +21,7 @@ export default {
 };
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .awards {
   margin-top: 15vh;
   grid-column: full-start / full-end;

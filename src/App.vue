@@ -47,7 +47,7 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss" scope>
 #app {
   box-sizing: border-box;
   margin: 0;
@@ -76,16 +76,16 @@ export default {
   padding-right: 10vw;
   z-index: 1000;
   opacity: 0.95;
-}
-.header__link {
-  font-weight: bold;
-  margin: 10px;
-  text-decoration: none;
-  color: grey;
-  cursor: pointer;
-  transition: color 0.2s ease;
-}
-.header__link:hover {
-  color: black;
+  &__link {
+    font-weight: bold;
+    margin: 10px;
+    text-decoration: none;
+    color: grey;
+    cursor: pointer;
+    transition: color 0.2s ease;
+    &:hover {
+      color: black;
+    }
+  }
 }
 </style>
