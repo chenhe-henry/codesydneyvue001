@@ -2,8 +2,14 @@
   <div id="app">
     <Header />
     <HomePage />
+    <router-link :to="{ name: 'home' }">Home</router-link>
+    <router-view />
     <Banner :content="banner.comingSoon" />
-    <Vote :totalVotes="totalVotes" @add-to-vote="addVotes" @remove-from-vote="deleteVote" />
+    <Vote
+      :totalVotes="totalVotes"
+      @add-to-vote="addVotes"
+      @remove-from-vote="deleteVote"
+    />
     <Banner :content="banner.comingSoon" />
     <Reviews @review-submitted="addReview" :reviews="reviews" />
     <Footer />
@@ -25,16 +31,16 @@ export default {
     Footer,
     Banner,
     Vote,
-    Reviews
+    Reviews,
   },
   data() {
     return {
       isDisabled: true,
       banner: {
-        comingSoon: ` 🏗 Coming Soon`
+        comingSoon: ` 🏗 Coming Soon`,
       },
       totalVotes: 0,
-      reviews: []
+      reviews: [],
     };
   },
   methods: {
@@ -46,8 +52,8 @@ export default {
     },
     addReview(websiteReview) {
       this.reviews.push(websiteReview);
-    }
-  }
+    },
+  },
 };
 </script>
 
