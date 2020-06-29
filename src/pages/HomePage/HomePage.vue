@@ -59,7 +59,7 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
+<style lang="scss" scoped>
 .homepage {
   margin-top: 15vh;
   grid-column: full-start / full-end;

@@ -35,19 +35,24 @@
       >
     </div>
     <router-view />
+    <Footer />
   </div>
 </template>
 
 <script>
+import Footer from "./components/Footer/Footer";
 export default {
   name: "App",
+  components: {
+    Footer,
+  },
   data() {
     return {};
   },
 };
 </script>
 
-<style lang="scss" scope>
+<style lang="scss" scoped>
 #app {
   box-sizing: border-box;
   margin: 0;

@@ -1,5 +1,5 @@
 <template>
-  <div class="awards">
+  <div class="projects">
     <Banner :content="banner.comingSoon" />
   </div>
 </template>
@@ -11,7 +11,7 @@ export default {
       banner: {
         content: `Sydney Volunteer
       <br />Programmers`,
-        comingSoon: ` 🏗 Awards Page is Coming Soon`,
+        comingSoon: ` 🏗 Projects Page is Coming Soon`,
       },
     };
   },
@@ -22,7 +22,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.awards {
+.projects {
   margin-top: 15vh;
   grid-column: full-start / full-end;
 }
