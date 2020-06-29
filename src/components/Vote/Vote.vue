@@ -1,7 +1,13 @@
 <template>
   <div class="Vote-block">
     <div v-for="team in teamMembers" :key="team.id" class="Vote-block-member">
-      <img :src="team.imageUrl" class="avatar" :alt="team.memberName" />
+      <img
+        :src="team.imageUrl"
+        class="avatar"
+        :alt="team.memberName"
+        @mouseover="shouldDisplay(team.id)"
+        @mouseleave="returnDisplay(team.id)"
+      />
       <h2>{{ team.memberName }}</h2>
       <details>
         <summary>More</summary>
@@ -122,6 +128,14 @@ export default {
       } else {
         return false;
       }
+    },
+    shouldDisplay(id) {
+      this.teamMembers[id - 1].imageUrl = `https://robohash.org/${Math.floor(
+        Math.random() * 10
+      )}?set=set2`;
+    },
+    returnDisplay(id) {
+      this.teamMembers[id - 1].imageUrl = `https://robohash.org/${id}?set=set2`;
     },
   },
 };
