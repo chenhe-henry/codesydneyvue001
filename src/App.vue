@@ -2,8 +2,6 @@
   <div id="app">
     <Header />
     <HomePage />
-    <router-link :to="{ name: 'home' }">Home</router-link>
-    <router-view />
     <Banner :content="banner.comingSoon" />
     <Vote
       :totalVotes="totalVotes"

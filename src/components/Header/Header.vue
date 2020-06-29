@@ -1,12 +1,20 @@
 <template>
   <div class="header">
     <h1>Code.Sydney</h1>
-    <a
+    <!-- <a
       v-for="nav in navigations"
       :key="`${nav.title}`"
       :href="`${nav.path}`"
       class="header-link"
-    >{{ nav.title }}</a>
+    >{{ nav.title }}</a> -->
+    <router-link :to="{ name: 'home' }">Home</router-link> |
+    <router-link :to="{ name: 'awards' }">Awards</router-link> |
+    <router-link :to="{ name: 'testimonials' }">Testimonials</router-link> |
+    <router-link :to="{ name: 'newsletter' }">Newsletter</router-link> |
+    <router-link :to="{ name: 'vueProgress' }">Vue</router-link> |
+    <router-link :to="{ name: 'campers' }">Campers</router-link> |
+    <router-link :to="{ name: 'contact' }">Contact</router-link>
+    <router-view />
   </div>
 </template>
 
@@ -14,47 +22,46 @@
 export default {
   name: "Header",
   props: {
-    msg: String
+    msg: String,
   },
   data() {
     return {
       navigations: [
         {
           title: "Home",
-          path: ""
+          path: "",
         },
         {
           title: "Awards",
-          path: ""
+          path: "",
         },
         {
           title: "Testimonials",
-          path: ""
+          path: "",
         },
         {
           title: "Newsletter",
-          path: ""
+          path: "",
         },
         {
           title: "Vue",
-          path: ""
+          path: "",
         },
         {
           title: "Campers",
-          path: ""
+          path: "",
         },
         {
           title: "Contact",
-          path: ""
-        }
-      ]
+          path: "",
+        },
+      ],
     };
-  }
+  },
 };
 </script>
 
-
-<style  scoped>
+<style scoped>
 .header {
   grid-column: full-start / full-end;
   height: 15vh;
