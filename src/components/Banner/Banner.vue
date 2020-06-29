@@ -1,6 +1,6 @@
 <template>
   <div class="banner">
-    <h1 class="banner-content">{{content}}</h1>
+    <h1 class="banner-content">{{ content }}</h1>
   </div>
 </template>
 
@@ -8,7 +8,7 @@
 export default { name: "Banner", props: { content: String } };
 </script>
 
-<style  scoped>
+<style scoped>
 .banner {
   color: white;
   background-color: rgb(8, 90, 125);

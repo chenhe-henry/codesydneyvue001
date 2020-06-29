@@ -8,6 +8,7 @@ import Newsletter from "./pages/Newsletter/Newsletter.vue";
 import Testimonials from "./pages/Testimonials/Testimonials.vue";
 import VueProgress from "./pages/VueProgress/VueProgress.vue";
 import Projects from "./pages/Projects/Projects";
+import OurTeam from "./pages/OurTeam/OurTeam";
 Vue.use(Router);
 
 export default new Router({
@@ -52,6 +53,11 @@ export default new Router({
       path: "/projects",
       name: "projects",
       component: Projects,
+    },
+    {
+      path: "/ourteam",
+      name: "ourTeam",
+      component: OurTeam,
     },
   ],
 });
