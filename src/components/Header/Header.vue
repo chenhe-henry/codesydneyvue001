@@ -1,12 +1,6 @@
 <template>
   <div class="header">
     <h1>Code.Sydney</h1>
-    <!-- <a
-      v-for="nav in navigations"
-      :key="`${nav.title}`"
-      :href="`${nav.path}`"
-      class="header-link"
-    >{{ nav.title }}</a> -->
     <router-link :to="{ name: 'home' }">Home</router-link> |
     <router-link :to="{ name: 'awards' }">Awards</router-link> |
     <router-link :to="{ name: 'testimonials' }">Testimonials</router-link> |
@@ -87,3 +81,10 @@ export default {
   color: black;
 }
 </style>
+
+<!-- <a
+      v-for="nav in navigations"
+      :key="`${nav.title}`"
+      :href="`${nav.path}`"
+      class="header-link"
+    >{{ nav.title }}</a> -->

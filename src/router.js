@@ -1,13 +1,13 @@
 import Vue from "vue";
 import Router from "vue-router";
-import Home from "./components/HomePage.vue";
+import Home from "./pages/HomePage/HomePage.vue";
 import Awards from "./pages/Awards/Awards.vue";
 import Campers from "./pages/Campers/Campers.vue";
 import Contact from "./pages/Contact/Contact.vue";
 import Newsletter from "./pages/Newsletter/Newsletter.vue";
 import Testimonials from "./pages/Testimonials/Testimonials.vue";
 import VueProgress from "./pages/VueProgress/VueProgress.vue";
-
+import Projects from "./pages/Projects/Projects";
 Vue.use(Router);
 
 export default new Router({
@@ -47,6 +47,11 @@ export default new Router({
       path: "/vueProgress",
       name: "vueProgress",
       component: VueProgress,
+    },
+    {
+      path: "/projects",
+      name: "projects",
+      component: Projects,
     },
   ],
 });
