@@ -53,6 +53,7 @@ export default {
   color: black;
   padding: 10px;
   grid-column: center-start / center-end;
+  margin: 0 10vw;
 }
 .ourservice-title {
   display: inline-block;

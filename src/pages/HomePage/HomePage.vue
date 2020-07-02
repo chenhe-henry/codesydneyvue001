@@ -12,21 +12,21 @@ import Banner from "../../components/Banner/Banner";
 export default {
   name: "HomePage",
   props: {
-    msg: String,
+    msg: String
   },
   components: {
     OurService,
-    Banner,
+    Banner
   },
   data() {
     return {
       serviceTitle: "What we do",
       banner: {
         content: `Sydney Volunteer Programmers`,
-        comingSoon: ` 🏗 Coming Soon`,
-      },
+        comingSoon: ` 🏗 Coming Soon`
+      }
     };
-  },
+  }
 };
 </script>
 

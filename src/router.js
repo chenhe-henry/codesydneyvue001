@@ -17,7 +17,7 @@ export default new Router({
   mode: "history",
   routes: [
     {
-      path: "/projects/:projectName",
+      path: "/projects/:id",
       name: "project",
       component: Project,
       props: true,

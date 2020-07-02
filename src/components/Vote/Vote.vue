@@ -2,7 +2,9 @@
   <div class="Vote-block">
     <div v-for="team in teamMembers" :key="team.id" class="Vote-block-member">
       <figure class="project__block">
-        <router-link :to="{name: 'project',params:{projectName:`${team.id}`}}">
+        <router-link
+          :to="{name: 'project',params:{projectName:`${team.memberName}`, description: `${team.description}`,id:`${team.id}`}}"
+        >
           <img
             :src="team.imageUrl"
             class="project__block__avatar"
@@ -162,7 +164,7 @@ export default {
   grid-column: center-start / center-end;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-
+  margin: 0 10vw;
   &-member {
     margin: 20px;
   }
