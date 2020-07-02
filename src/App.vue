@@ -47,6 +47,7 @@ export default {
     )
     [center-end] minmax(6rem, 1fr) [full-end];
 }
+
 .nav {
   grid-column: full-start / full-end;
   height: 15vh;

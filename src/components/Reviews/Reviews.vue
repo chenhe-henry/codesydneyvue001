@@ -6,23 +6,15 @@
       v-for="(tab, index) in tabs"
       :key="index"
       @click="selectedTab = tab"
-    >
-      {{ tab }}
-    </button>
+    >{{ tab }}</button>
     <div v-show="selectedTab === `Reviews`">
       <div>
         <h3 v-if="reviews.length === 0">There are no reviews yet</h3>
-        <h3 v-else-if="reviews.length === 1">
-          There are some reviews from {{ reviews.length }} person
-        </h3>
+        <h3 v-else-if="reviews.length === 1">There are some reviews from {{ reviews.length }} person</h3>
         <h3 v-else>There are some reviews from {{ reviews.length }} people</h3>
       </div>
       <div class="Review-blocks">
-        <div
-          v-for="(review, index) in reviews"
-          :key="index"
-          class="Review-block"
-        >
+        <div v-for="(review, index) in reviews" :key="index" class="Review-block">
           <h4>Review Form {{ review.name }}</h4>
           <h4>Rating: {{ review.rating }}</h4>
           <h4>Review: {{ review.review }}</h4>
@@ -69,7 +61,7 @@
 export default {
   name: "Reviews",
   props: {
-    reviews: Array,
+    reviews: Array
   },
 
   data() {
@@ -79,7 +71,7 @@ export default {
       review: null,
       errors: [],
       tabs: ["Reviews", "Make a Review"],
-      selectedTab: "Reviews",
+      selectedTab: "Reviews"
     };
   },
   methods: {
@@ -88,7 +80,7 @@ export default {
         let websiteReview = {
           name: this.name,
           rating: this.rating,
-          review: this.review,
+          review: this.review
         };
         this.$emit("review-submitted", websiteReview);
         this.name = null;
@@ -102,8 +94,8 @@ export default {
         if (!this.rating) this.errors.push("Rating required");
         if (!this.review) this.errors.push("Review required");
       }
-    },
-  },
+    }
+  }
 };
 </script>
 
