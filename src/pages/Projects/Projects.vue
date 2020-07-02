@@ -1,11 +1,7 @@
 <template>
   <div class="projects">
     <Banner :content="banner.comingSoon" />
-    <Vote
-      :totalVotes="totalVotes"
-      @add-to-vote="addVotes"
-      @remove-from-vote="deleteVote"
-    />
+    <Vote :totalVotes="totalVotes" @add-to-vote="addVotes" @remove-from-vote="deleteVote" />
     <Banner :content="banner.comingSoon" />
     <h1>Ideas</h1>
   </div>
@@ -19,14 +15,14 @@ export default {
       banner: {
         content: `Sydney Volunteer
       <br />Programmers`,
-        comingSoon: ` 🏗 Projects Page is Coming Soon`,
+        comingSoon: ` 🏗 Projects Page is Coming Soon`
       },
-      totalVotes: 0,
+      totalVotes: 0
     };
   },
   components: {
     Banner,
-    Vote,
+    Vote
   },
   methods: {
     addVotes() {
@@ -37,8 +33,8 @@ export default {
     },
     addReview(websiteReview) {
       this.reviews.push(websiteReview);
-    },
-  },
+    }
+  }
 };
 </script>
 

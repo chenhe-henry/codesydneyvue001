@@ -1,16 +1,16 @@
 <template>
   <div id="app">
-    <div class="header">
+    <div class="nav">
       <h1>Code.Sydney</h1>
-      <router-link class="header__link" :to="{ name: 'home' }">Home</router-link>|
-      <router-link class="header__link" :to="{ name: 'awards' }">Awards</router-link>|
-      <router-link class="header__link" :to="{ name: 'projects' }">Projects</router-link>|
-      <router-link class="header__link" :to="{ name: 'testimonials' }">Testimonials</router-link>|
-      <router-link class="header__link" :to="{ name: 'ourTeam' }">OurTeam</router-link>|
-      <router-link class="header__link" :to="{ name: 'newsletter' }">Newsletter</router-link>|
-      <router-link class="header__link" :to="{ name: 'vueProgress' }">Vue</router-link>|
-      <router-link class="header__link" :to="{ name: 'campers' }">Campers</router-link>|
-      <router-link class="header__link" :to="{ name: 'contact' }">Contact</router-link>
+      <router-link class="nav__link" :to="{ name: 'home' }">Home</router-link>|
+      <router-link class="nav__link" :to="{ name: 'awards' }">Awards</router-link>|
+      <router-link class="nav__link" :to="{ name: 'projects' }">Projects</router-link>|
+      <router-link class="nav__link" :to="{ name: 'testimonials' }">Testimonials</router-link>|
+      <router-link class="nav__link" :to="{ name: 'ourTeam' }">OurTeam</router-link>|
+      <router-link class="nav__link" :to="{ name: 'newsletter' }">Newsletter</router-link>|
+      <router-link class="nav__link" :to="{ name: 'vueProgress' }">Vue</router-link>|
+      <router-link class="nav__link" :to="{ name: 'campers' }">Campers</router-link>|
+      <router-link class="nav__link" :to="{ name: 'contact' }">Contact</router-link>
     </div>
     <router-view />
     <Footer />
@@ -47,7 +47,7 @@ export default {
     )
     [center-end] minmax(6rem, 1fr) [full-end];
 }
-.header {
+.nav {
   grid-column: full-start / full-end;
   height: 15vh;
   background-color: white;
