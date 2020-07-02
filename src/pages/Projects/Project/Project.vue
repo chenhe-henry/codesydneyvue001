@@ -1,6 +1,6 @@
 <template>
   <div class="project">
-    <h1>This page is for {{projectName}}</h1>
+    <h1>This page is for project #{{projectName}}</h1>
   </div>
 </template>
 

@@ -10,11 +10,18 @@ import VueProgress from "./pages/VueProgress/VueProgress.vue";
 import Projects from "./pages/Projects/Projects";
 import OurTeam from "./pages/OurTeam/OurTeam";
 import Project from "./pages/Projects/Project/Project";
+import fileNotFound from "./pages/fileNotFound/fileNotFound";
 Vue.use(Router);
 
 export default new Router({
   mode: "history",
   routes: [
+    {
+      path: "/projects/:projectName",
+      name: "project",
+      component: Project,
+      props: true,
+    },
     {
       path: "/",
       name: "home",
@@ -55,16 +62,12 @@ export default new Router({
       name: "projects",
       component: Projects,
     },
-    {
-      path: "/projects/:projectName",
-      name: "project",
-      component: Project,
-      props: true,
-    },
+
     {
       path: "/ourteam",
       name: "ourTeam",
       component: OurTeam,
     },
+    { path: "*", component: fileNotFound },
   ],
 });

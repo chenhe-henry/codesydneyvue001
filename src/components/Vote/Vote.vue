@@ -1,23 +1,22 @@
 <template>
   <div class="Vote-block">
-    <div
-      v-for="team in teamMembers"
-      :key="team.id"
-      class="Vote-block-member"
-      :to="{name: 'project',params:{projectName:`${team.memberName}`}}"
-    >
-      <router-link :to="{name: 'project',params:{projectName:`${team.memberName}`}}">
-        <img
-          :src="team.imageUrl"
-          class="avatar"
-          :alt="team.memberName"
-          @mouseover="shouldDisplay(team.id)"
-          @mouseleave="returnDisplay(team.id)"
-        />
-      </router-link>
-      <h2>{{ team.memberName }}</h2>
+    <div v-for="team in teamMembers" :key="team.id" class="Vote-block-member">
+      <figure class="project__block">
+        <router-link :to="{name: 'project',params:{projectName:`${team.id}`}}">
+          <img
+            :src="team.imageUrl"
+            class="project__block__avatar"
+            :alt="team.memberName"
+            @mouseover="shouldDisplay(team.id)"
+            @mouseleave="returnDisplay(team.id)"
+          />
+        </router-link>
+        <figcaption class="project__block__avatar-caption">
+          <h2>{{ team.memberName }}</h2>
+        </figcaption>
+      </figure>
       <details>
-        <summary>More</summary>
+        <summary>{{ team.memberName }}</summary>
         <h5 class="member-description">{{ team.description }}</h5>
       </details>
       <h1>{{ team.vote }}/{{ totalVotes }}</h1>
@@ -147,9 +146,18 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.avatar {
-  height: 200px;
+.project__block {
+  position: relative;
+  &__avatar {
+    height: 200px;
+    transition: all 1.2s;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
 }
+
 .Vote-block {
   grid-column: center-start / center-end;
   display: grid;
