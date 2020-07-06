@@ -87,7 +87,7 @@ export default {
       display: inline-block;
       width: 300px;
       text-align: justify;
-
+      text-justify: inter-word;
       font-weight: bold;
     }
   }

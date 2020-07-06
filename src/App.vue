@@ -1,7 +1,9 @@
 <template>
   <div id="app">
     <div class="nav">
-      <h1>Code.Sydney</h1>
+      <h1>
+        <img src="./assets/logo.png" alt="logo1" height="25px" /> Code.Sydney
+      </h1>
       <router-link class="nav__link" :to="{ name: 'home' }">Home</router-link>|
       <router-link class="nav__link" :to="{ name: 'awards' }">Awards</router-link>|
       <router-link class="nav__link" :to="{ name: 'projects' }">Projects</router-link>|
