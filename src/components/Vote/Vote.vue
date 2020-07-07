@@ -10,6 +10,12 @@
       {{ tab }}
     </button>
 
+    <div class="rank">
+      <div v-if="totalVotes === 0"></div>
+      <div v-else-if="totalVotes === 1">🥇</div>
+      <div v-else-if="totalVotes === 2">🥇 🥈</div>
+      <div v-else>🥇 🥈 🥉</div>
+    </div>
     <div v-show="selectedTab === `Grid`">
       <div class="Vote-block-grid">
         <div
@@ -320,5 +326,8 @@ export default {
   font-size: 1.5rem;
   border-radius: 5px;
   cursor: pointer;
+}
+.rank {
+  font-size: 5rem;
 }
 </style>
