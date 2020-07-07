@@ -5,14 +5,30 @@
         <img src="./assets/logo.png" alt="logo1" height="25px" /> Code.Sydney
       </h1>
       <router-link class="nav__link" :to="{ name: 'home' }">Home</router-link>|
-      <router-link class="nav__link" :to="{ name: 'awards' }">Awards</router-link>|
-      <router-link class="nav__link" :to="{ name: 'projects' }">Projects</router-link>|
-      <router-link class="nav__link" :to="{ name: 'testimonials' }">Testimonials</router-link>|
-      <router-link class="nav__link" :to="{ name: 'ourTeam' }">OurTeam</router-link>|
-      <router-link class="nav__link" :to="{ name: 'newsletter' }">Newsletter</router-link>|
-      <router-link class="nav__link" :to="{ name: 'vueProgress' }">Vue</router-link>|
-      <router-link class="nav__link" :to="{ name: 'campers' }">Campers</router-link>|
-      <router-link class="nav__link" :to="{ name: 'contact' }">Contact</router-link>
+      <router-link class="nav__link" :to="{ name: 'awards' }"
+        >Awards</router-link
+      >|
+      <router-link class="nav__link" :to="{ name: 'projects' }"
+        >Projects</router-link
+      >|
+      <router-link class="nav__link" :to="{ name: 'testimonials' }"
+        >Testimonials</router-link
+      >|
+      <router-link class="nav__link" :to="{ name: 'ourTeam' }"
+        >OurTeam</router-link
+      >|
+      <router-link class="nav__link" :to="{ name: 'newsletter' }"
+        >Newsletter</router-link
+      >|
+      <router-link class="nav__link" :to="{ name: 'vueProgress' }"
+        >Vue</router-link
+      >|
+      <router-link class="nav__link" :to="{ name: 'campers' }"
+        >Good to go</router-link
+      >|
+      <router-link class="nav__link" :to="{ name: 'contact' }"
+        >Contact</router-link
+      >
     </div>
     <router-view />
     <Footer />
@@ -23,11 +39,11 @@ import Footer from "./components/Footer/Footer";
 export default {
   name: "App",
   components: {
-    Footer
+    Footer,
   },
   data() {
     return {};
-  }
+  },
 };
 </script>
 
