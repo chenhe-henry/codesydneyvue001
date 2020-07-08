@@ -62,7 +62,9 @@
             <summary>{{ team.memberName }}</summary>
             <h5 class="member-description">{{ team.description }}</h5>
           </details>
-          <h1><BaseIcon name="users" />{{ team.vote }}/{{ totalVotes }}</h1>
+          <h1>
+            <BaseIcon name="users"> {{ team.vote }}/{{ totalVotes }}</BaseIcon>
+          </h1>
           <button class="Vote-block-grid-button" @click="addToVote(team.id)">
             Like ❤️
           </button>
@@ -113,7 +115,11 @@
           </div>
 
           <div>
-            <h1><BaseIcon name="users" />{{ team.vote }}/{{ totalVotes }}</h1>
+            <h1>
+              <BaseIcon name="users">
+                {{ team.vote }}/{{ totalVotes }}</BaseIcon
+              >
+            </h1>
 
             <button class="Vote-block-list-button" @click="addToVote(team.id)">
               Like ❤️
