@@ -10,12 +10,23 @@
       {{ tab }}
     </button>
 
-    <div class="rank">
-      <div v-if="totalVotes === 0"></div>
-      <div v-else-if="totalVotes === 1">🥇</div>
-      <div v-else-if="totalVotes === 2">🥇 🥈</div>
-      <div v-else>🥇 🥈 🥉</div>
+    <div class="rank-topThree">
+      <div></div>
+      <div class="rank-topThree-indivual">
+        <div>🥇</div>
+        <div class="rank-topThree-indivual__text">{{ firstPlace }}</div>
+      </div>
+      <div class="rank-topThree-indivual">
+        <div>🥈</div>
+        <div class="rank-topThree-indivual__text">{{ secondPlace }}</div>
+      </div>
+      <div class="rank-topThree-indivual">
+        <div>🥉</div>
+        <div class="rank-topThree-indivual__text">{{ thirdPlace }}</div>
+      </div>
+      <div></div>
     </div>
+
     <div v-show="selectedTab === `Grid`">
       <div class="Vote-block-grid">
         <div
@@ -239,6 +250,45 @@ export default {
       this.teamMembers[id - 1].imageUrl = `https://robohash.org/${id}?set=set2`;
     },
   },
+  computed: {
+    firstPlace: function() {
+      let voteRank = [];
+      let firstPlace;
+      this.teamMembers.forEach((el) => {
+        voteRank.push(el.vote);
+      });
+      let voteBank = [...voteRank].sort((a, b) => b - a);
+      if (this.totalVotes > 0) {
+        firstPlace = this.teamMembers[voteRank.indexOf(voteBank[0])].memberName;
+      }
+      return firstPlace;
+    },
+    secondPlace: function() {
+      let voteRank = [];
+      let secondPlace;
+      this.teamMembers.forEach((el) => {
+        voteRank.push(el.vote);
+      });
+      let voteBank = [...voteRank].sort((a, b) => b - a);
+      if (this.totalVotes > 0) {
+        secondPlace = this.teamMembers[voteRank.indexOf(voteBank[1])]
+          .memberName;
+      }
+      return secondPlace;
+    },
+    thirdPlace: function() {
+      let voteRank = [];
+      let thirdPlace;
+      this.teamMembers.forEach((el) => {
+        voteRank.push(el.vote);
+      });
+      let voteBank = [...voteRank].sort((a, b) => b - a);
+      if (this.totalVotes > 0) {
+        thirdPlace = this.teamMembers[voteRank.indexOf(voteBank[2])].memberName;
+      }
+      return thirdPlace;
+    },
+  },
 };
 </script>
 
@@ -310,6 +360,19 @@ export default {
   }
 }
 
+.rank-topThree {
+  font-size: 5rem;
+  display: grid;
+  grid-template-columns: 5vw 1fr 1fr 1fr 5vw;
+  &-indivual {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    &__text {
+      font-size: 2.5rem;
+    }
+  }
+}
+
 .member-description {
   text-align: justify;
   &::first-letter {
@@ -326,8 +389,5 @@ export default {
   font-size: 1.5rem;
   border-radius: 5px;
   cursor: pointer;
-}
-.rank {
-  font-size: 5rem;
 }
 </style>
