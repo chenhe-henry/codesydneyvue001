@@ -117,8 +117,8 @@
           <div>
             <h1>
               <BaseIcon name="users">
-                {{ team.vote }}/{{ totalVotes }}</BaseIcon
-              >
+                {{ team.vote }}/{{ totalVotes }}
+              </BaseIcon>
             </h1>
 
             <button class="Vote-block-list-button" @click="addToVote(team.id)">
