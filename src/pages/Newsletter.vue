@@ -4,7 +4,7 @@
   </div>
 </template>
 <script>
-import Banner from "../../components/Banner/Banner";
+import Banner from "../components/Banner";
 export default {
   data() {
     return {

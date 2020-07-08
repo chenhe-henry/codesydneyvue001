@@ -5,8 +5,8 @@
   </div>
 </template>
 <script>
-import Banner from "../../components/Banner/Banner";
-import Reviews from "../../components/Reviews/Reviews";
+import Banner from "../components/Banner";
+import Reviews from "../components/Reviews";
 export default {
   data() {
     return {

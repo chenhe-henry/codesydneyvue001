@@ -4,15 +4,15 @@
     <div v-for="todo in todos" :key="todo.id" role="todos" class="todos">
       <div class="todo">
         <a :href="todo.url" target="_blank" class="todo__link">
-          <h1>{{todo.title}}</h1>
-          <h1>{{todo.date}}</h1>
+          <h1>{{ todo.title }}</h1>
+          <h1>{{ todo.date }}</h1>
         </a>
       </div>
     </div>
   </div>
 </template>
 <script>
-import Banner from "../../components/Banner/Banner";
+import Banner from "../components/Banner";
 export default {
   data() {
     return {
@@ -21,19 +21,19 @@ export default {
           id: 1,
           title: "JS for WP Conf",
           date: "July 8-10th",
-          url: "https://javascriptforwp.com/conference/"
-        }
+          url: "https://javascriptforwp.com/conference/",
+        },
       ],
       banner: {
         content: `Sydney Volunteer
       <br />Programmers`,
-        comingSoon: ` 🏗 Good to go Page is Coming Soon`
-      }
+        comingSoon: ` 🏗 Good to go Page is Coming Soon`,
+      },
     };
   },
   components: {
-    Banner
-  }
+    Banner,
+  },
 };
 </script>
 

@@ -1,16 +1,16 @@
 import Vue from "vue";
 import Router from "vue-router";
-import Home from "./pages/HomePage/HomePage.vue";
-import Awards from "./pages/Awards/Awards.vue";
-import Campers from "./pages/Campers/Campers.vue";
-import Contact from "./pages/Contact/Contact.vue";
-import Newsletter from "./pages/Newsletter/Newsletter.vue";
-import Testimonials from "./pages/Testimonials/Testimonials.vue";
-import VueProgress from "./pages/VueProgress/VueProgress.vue";
-import Projects from "./pages/Projects/Projects";
-import OurTeam from "./pages/OurTeam/OurTeam";
-import Project from "./pages/Projects/Project/Project";
-import fileNotFound from "./pages/fileNotFound/fileNotFound";
+import Home from "./pages/HomePage.vue";
+import Awards from "./pages/Awards.vue";
+import Campers from "./pages/Campers.vue";
+import Contact from "./pages/Contact.vue";
+import Newsletter from "./pages/Newsletter.vue";
+import Testimonials from "./pages/Testimonials.vue";
+import VueProgress from "./pages/VueProgress.vue";
+import Projects from "./pages/Projects";
+import OurTeam from "./pages/OurTeam";
+import Project from "./pages/Project";
+import fileNotFound from "./pages/fileNotFound";
 Vue.use(Router);
 
 export default new Router({
