@@ -2,10 +2,12 @@
   <div class="ourservice">
     <h1 class="ourservice-title">{{title}}</h1>
     <div class="ourservice-list">
-      <div v-for="service in services" :key="`${service.title}`" class="ourservice-item">
-        <img :src="`${service.linkUrl}`" :alt="`${service.title}`" />
-        <h1>{{service.title}}</h1>
-        <h3 class="ourservice-content">{{service.content}}</h3>
+      <div v-for="service in services" :key="`${service.title}`" role="service">
+        <BaseCard>
+          <img slot="img" :src="`${service.linkUrl}`" :alt="`${service.title}`" />
+          <h2 slot="title">{{service.title}}</h2>
+          <h4 slot="content" class="ourservice-content">{{service.content}}</h4>
+        </BaseCard>
       </div>
     </div>
   </div>
@@ -51,7 +53,7 @@ export default {
 .ourservice {
   background-color: white;
   color: black;
-  padding: 10px;
+
   grid-column: center-start / center-end;
   margin: 0 10vw;
 }
@@ -60,12 +62,12 @@ export default {
   font-size: 3rem;
 }
 .ourservice-list {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
 }
-.ourservice-item {
-  flex-grow: 1;
-  width: 33vw;
-  padding: 20px;
+
+.ourservice-content {
+  text-align: justify;
 }
 .ourservice-content::first-letter {
   font-size: 2rem;

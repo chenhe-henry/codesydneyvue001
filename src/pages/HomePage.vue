@@ -1,8 +1,9 @@
 <template>
   <div class="homepage">
-    <BaseBanner class="homepage__banner"
-      >Sydney Volunteer <br />Programmers</BaseBanner
-    >
+    <BaseBanner class="homepage__banner">
+      Sydney Volunteer
+      <br />Programmers
+    </BaseBanner>
     <OurService :title="serviceTitle" />
   </div>
 </template>
@@ -13,16 +14,16 @@ import OurService from "../components/OurService";
 export default {
   name: "HomePage",
   props: {
-    msg: String,
+    msg: String
   },
   components: {
-    OurService,
+    OurService
   },
   data() {
     return {
-      serviceTitle: "What we do",
+      serviceTitle: "What we do"
     };
-  },
+  }
 };
 </script>
 
