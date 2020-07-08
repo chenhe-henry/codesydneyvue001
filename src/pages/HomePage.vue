@@ -1,13 +1,14 @@
 <template>
   <div class="homepage">
-    <Banner class="homepage__banner" :content="banner.content" />
+    <BaseBanner class="homepage__banner"
+      >Sydney Volunteer <br />Programmers</BaseBanner
+    >
     <OurService :title="serviceTitle" />
   </div>
 </template>
 
 <script>
 import OurService from "../components/OurService";
-import Banner from "../components/Banner";
 
 export default {
   name: "HomePage",
@@ -16,15 +17,10 @@ export default {
   },
   components: {
     OurService,
-    Banner,
   },
   data() {
     return {
       serviceTitle: "What we do",
-      banner: {
-        content: `Sydney Volunteer Programmers`,
-        comingSoon: ` 🏗 Coming Soon`,
-      },
     };
   },
 };

@@ -1,23 +1,14 @@
 <template>
   <div class="vueProgress">
-    <Banner :content="banner.comingSoon" />
+    <BaseBanner>🏗 VueProgress Page is Coming Soon</BaseBanner>
   </div>
 </template>
 <script>
-import Banner from "../components/Banner";
 export default {
   data() {
-    return {
-      banner: {
-        content: `Sydney Volunteer
-      <br />Programmers`,
-        comingSoon: ` 🏗 VueProgress Page is Coming Soon`,
-      },
-    };
+    return {};
   },
-  components: {
-    Banner,
-  },
+  components: {}
 };
 </script>
 

@@ -1,6 +1,6 @@
 <template>
   <div class="campers">
-    <Banner :content="banner.comingSoon" />
+    <BaseBanner>🏗 Good to go Page is Coming Soon</BaseBanner>
     <div v-for="todo in todos" :key="todo.id" role="todos" class="todos">
       <div class="todo">
         <a :href="todo.url" target="_blank" class="todo__link">
@@ -12,7 +12,6 @@
   </div>
 </template>
 <script>
-import Banner from "../components/Banner";
 export default {
   data() {
     return {
@@ -24,16 +23,9 @@ export default {
           url: "https://javascriptforwp.com/conference/",
         },
       ],
-      banner: {
-        content: `Sydney Volunteer
-      <br />Programmers`,
-        comingSoon: ` 🏗 Good to go Page is Coming Soon`,
-      },
     };
   },
-  components: {
-    Banner,
-  },
+  components: {},
 };
 </script>
 

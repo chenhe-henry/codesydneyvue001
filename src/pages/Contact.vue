@@ -1,23 +1,14 @@
 <template>
   <div class="contact">
-    <Banner :content="banner.comingSoon" />
+    <BaseBanner>🏗 Contact Page is Coming Soon </BaseBanner>
   </div>
 </template>
 <script>
-import Banner from "../components/Banner";
 export default {
   data() {
-    return {
-      banner: {
-        content: `Sydney Volunteer
-      <br />Programmers`,
-        comingSoon: ` 🏗 Contact Page is Coming Soon`,
-      },
-    };
+    return {};
   },
-  components: {
-    Banner,
-  },
+  components: {},
 };
 </script>
 

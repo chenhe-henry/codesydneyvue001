@@ -1,32 +1,25 @@
 <template>
   <div class="testimonials">
-    <Banner :content="banner.comingSoon" />
+    <BaseBanner>🏗 Testimonials Page is Coming Soon</BaseBanner>
     <Reviews @review-submitted="addReview" :reviews="reviews" />
   </div>
 </template>
 <script>
-import Banner from "../components/Banner";
 import Reviews from "../components/Reviews";
 export default {
   data() {
     return {
-      banner: {
-        content: `Sydney Volunteer
-      <br />Programmers`,
-        comingSoon: ` 🏗 Testimonials Page is Coming Soon`,
-      },
-      reviews: [],
+      reviews: []
     };
   },
   components: {
-    Banner,
-    Reviews,
+    Reviews
   },
   methods: {
     addReview(websiteReview) {
       this.reviews.push(websiteReview);
-    },
-  },
+    }
+  }
 };
 </script>
 

@@ -1,6 +1,6 @@
 <template>
   <div class="ourTeam">
-    <Banner :content="banner.comingSoon" />
+    <BaseBanner>💪 We are growing</BaseBanner>
     <div class="ourTeam__block">
       <div v-for="team in teamMembers" :key="team.id" class="Vote-block-member">
         <img :src="team.imageUrl" class="avatar" :alt="team.memberName" />
@@ -15,15 +15,9 @@
   </div>
 </template>
 <script>
-import Banner from "../components/Banner";
 export default {
   data() {
     return {
-      banner: {
-        content: `Sydney Volunteer
-      <br />Programmers`,
-        comingSoon: `💪 We are growing`,
-      },
       teamMembers: [
         {
           id: 1,
@@ -100,9 +94,7 @@ export default {
       ],
     };
   },
-  components: {
-    Banner,
-  },
+  components: {},
 };
 </script>
 

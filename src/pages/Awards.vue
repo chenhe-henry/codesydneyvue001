@@ -1,6 +1,6 @@
 <template>
   <div class="awards">
-    <Banner :content="banner.content" />
+    <BaseBanner>Awards and Events</BaseBanner>
     <div class="awards__block">
       <figure v-for="award in awards" :key="award.id">
         <img
@@ -16,13 +16,9 @@
   </div>
 </template>
 <script>
-import Banner from "../components/Banner";
 export default {
   data() {
     return {
-      banner: {
-        content: `Awards and Events`,
-      },
       awards: [
         {
           id: "1",
@@ -72,9 +68,7 @@ export default {
       ],
     };
   },
-  components: {
-    Banner,
-  },
+  components: {},
 };
 </script>
 

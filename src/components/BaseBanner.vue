@@ -1,11 +1,13 @@
 <template>
   <div class="banner">
-    <h1 class="banner-content">{{ content }}</h1>
+    <h1 class="banner-content">
+      <slot></slot>
+    </h1>
   </div>
 </template>
 
 <script>
-export default { name: "Banner", props: { content: String } };
+export default {};
 </script>
 
 <style scoped>
@@ -17,7 +19,7 @@ export default { name: "Banner", props: { content: String } };
   grid-column: full-start / full-end;
 }
 
-.banner-content::after {
+/* .banner-content::after {
   overflow: hidden;
   display: inline-block;
   vertical-align: bottom;
@@ -32,5 +34,5 @@ export default { name: "Banner", props: { content: String } };
   to {
     width: 60px;
   }
-}
+} */
 </style>
