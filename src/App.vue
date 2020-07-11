@@ -20,7 +20,7 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss" >
 #app {
   box-sizing: border-box;
   margin: 0;
@@ -29,7 +29,7 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  // color: #2c3e50;
   display: grid;
   grid-template-columns:
     [full-start] minmax(6rem, 1fr) [center-start] repeat(
@@ -37,5 +37,22 @@ export default {
       [col-start] minmax(min-content, 28rem) [col-end]
     )
     [center-end] minmax(6rem, 1fr) [full-end];
+}
+:root {
+  //color
+  --banner-bg-color: rgb(8, 90, 125);
+  --banner-text-color: white;
+  //font-size
+  --p-font-size: 1rem;
+  --nav-font-size: 1.1rem;
+  --title-font-size: 1.5rem;
+  --heading-font-size: 3rem;
+  //font-weight
+  --p-font-weight: 500;
+  --nav-font-weight: 600;
+  --title-font-weight: 700;
+  --heading-font-weight: bold;
+  //height
+  --banner-height: 15vh;
 }
 </style>

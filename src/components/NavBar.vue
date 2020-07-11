@@ -1,8 +1,8 @@
 <template>
   <div class="nav">
-    <h1>
+    <!-- <div class="nav__logo">
       <img src="../assets/logo.png" alt="logo1" height="25px" /> Code.Sydney
-    </h1>
+    </div>-->
     <router-link class="nav__link" :to="{ name: 'home' }">Home</router-link>|
     <router-link class="nav__link" :to="{ name: 'awards' }">Awards</router-link>|
     <router-link class="nav__link" :to="{ name: 'projects' }">Projects</router-link>|
@@ -21,6 +21,7 @@ export default {};
 
 <style lang="scss" scoped>
 .nav {
+  font-size: var(--nav-font-size);
   grid-column: full-start / full-end;
   height: 15vh;
   background-color: white;
@@ -31,8 +32,12 @@ export default {};
   padding-right: 10vw;
   z-index: 1000;
   opacity: 0.95;
+  &__logo {
+    font-size: var(--heading-font-size);
+    font-weight: var(--heading-font-weight);
+  }
   &__link {
-    font-weight: bold;
+    font-weight: var(--nav-font-weight);
     margin: 10px;
     text-decoration: none;
     color: grey;

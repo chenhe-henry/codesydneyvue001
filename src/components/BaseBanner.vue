@@ -10,12 +10,13 @@
 export default {};
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .banner {
-  color: white;
-  background-color: rgb(8, 90, 125);
-  height: 20vh;
-  font-size: 2rem;
+  color: var(--banner-text-color);
+  background-color: var(--banner-bg-color);
+  height: var(--banner-height);
+  font-size: var(--title-font-size);
+  font-weight: var(--title-font-weight);
   grid-column: full-start / full-end;
 }
 

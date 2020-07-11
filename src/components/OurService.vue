@@ -53,7 +53,6 @@ export default {
 .ourservice {
   background-color: white;
   color: black;
-
   grid-column: center-start / center-end;
   margin: 0 10vw;
 }
