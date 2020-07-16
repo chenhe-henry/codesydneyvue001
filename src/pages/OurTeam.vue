@@ -7,14 +7,45 @@
         <h2>{{ team.memberName }}</h2>
         <h4>{{ team.memberTitle }}</h4>
         <div>
-          <img :src="team.imageUrl" :alt="team.memberName" :title="team.memberName" height="20px" />
-          <img :src="team.imageUrl" :alt="team.memberName" :title="team.memberName" height="20px" />
-          <img :src="team.imageUrl" :alt="team.memberName" :title="team.memberName" height="20px" />
-          <img :src="team.imageUrl" :alt="team.memberName" :title="team.memberName" height="20px" />
+          <img
+            :src="team.imageUrl"
+            :alt="team.memberName"
+            :title="team.memberName"
+            height="20px"
+            class="badge"
+          />
+          <img
+            :src="team.imageUrl"
+            :alt="team.memberName"
+            :title="team.memberName"
+            height="20px"
+            class="badge"
+          />
+          <img
+            :src="team.imageUrl"
+            :alt="team.memberName"
+            :title="team.memberName"
+            height="20px"
+            class="badge"
+          />
+          <img
+            :src="team.imageUrl"
+            :alt="team.memberName"
+            :title="team.memberName"
+            height="20px"
+            class="badge"
+          />
         </div>
         <details>
-          <summary>More about me</summary>
+          <summary>More about {{ team.memberName }}</summary>
           <h5 class="member-description">{{ team.description }}</h5>
+          <img
+            :src="team.imageUrl"
+            :alt="team.memberName"
+            :title="team.memberName"
+            height="20px"
+            class="badge"
+          />
         </details>
       </div>
     </div>
@@ -108,6 +139,17 @@ export default {
 .avatar {
   height: 200px;
   clip-path: circle();
+}
+.badge {
+  margin: 0 10px;
+  clip-path: circle();
+
+  &:hover {
+    transform: scale(1.2);
+  }
+  &:active {
+    transform: scale(1);
+  }
 }
 .Vote-block {
   &-member {
