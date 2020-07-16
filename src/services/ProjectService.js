@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const apiClient = axios.create({
-  baseURL: "https://jsonplaceholder.typicode.com/",
+  baseURL: "https://corona-virus-stats.herokuapp.com/api/v1/cases/",
   withCredentials: false,
   headers: {
     Accept: "application/json",
@@ -11,6 +11,6 @@ const apiClient = axios.create({
 
 export default {
   getProjects() {
-    return apiClient.get("posts");
+    return apiClient.get("countries-search");
   },
 };
